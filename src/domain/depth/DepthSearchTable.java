@@ -33,10 +33,10 @@ public class DepthSearchTable {
         parent.append("PAI | ");
 
         nodes.values().forEach(e -> {
-            ed.append(e.getDiscoveryTime() + " | ");
-            et.append(e.getEndTime() + " | ");
+            ed.append((e.getDiscoveryTime() < 10 ? "0" : "") +e.getDiscoveryTime() + " | ");
+            et.append((e.getEndTime() < 10 ? "0" : "") + e.getEndTime() + " | ");
             String parentName = e.getParent() != null ? e.getParent().getValue() : "Ø";
-            parent.append(parentName + " | ");
+            parent.append(parentName + "  | ");
         });
 
         System.out.println(ed);
@@ -46,6 +46,6 @@ public class DepthSearchTable {
 
 
     private void printColumn(Node col) {
-        System.out.print(" "+col.getValue() + " |");
+        System.out.print(" " + col.getValue() + "  |");
     }
 }

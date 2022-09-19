@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ea43213-3713-4a34-90fe-3e5438bedbd2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buscas_Grafos.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/depth/DepthSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/depth/DepthSearchResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/depth/DepthSearchTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/depth/DepthSearchTableItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/general/Node.java" afterDir="false" />
+    <list default="true" id="5ea43213-3713-4a34-90fe-3e5438bedbd2" name="Changes" comment="+ DepthSearch">
+      <change afterPath="$PROJECT_DIR$/src/domain/breadth/BreadthSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/breadth/BreadthSearchResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/breadth/BreadthSearchTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/breadth/BreadthSearchTableItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/depth/DepthSearchTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/depth/DepthSearchTable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +71,16 @@
       <updated>1663530312409</updated>
       <workItem from="1663530315464" duration="2585000" />
       <workItem from="1663532937308" duration="53000" />
-      <workItem from="1663533027195" duration="10337000" />
+      <workItem from="1663533027195" duration="15967000" />
     </task>
+    <task id="LOCAL-00001" summary="+ DepthSearch">
+      <created>1663551562351</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663551562351</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,5 +96,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="+ DepthSearch" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ DepthSearch" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Buscas_Grafos$App.ic" NAME="App Coverage Results" MODIFIED="1663556891768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
