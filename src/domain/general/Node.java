@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class Node {
     private final String value;
-    private final Queue<Node> nodes;
+    private final LinkedList<Node> nodes;
 
     public Node(String value) {
         this.value = value;
@@ -31,7 +31,7 @@ public class Node {
         return !nodes.contains(node);
     }
 
-    public Queue<Node> getNeighborQueue() {
+    public LinkedList<Node> getNeighborQueue() {
         return nodes;
     }
 

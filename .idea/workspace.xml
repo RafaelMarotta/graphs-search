@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ea43213-3713-4a34-90fe-3e5438bedbd2" name="Changes" comment="+ Add Search Tree">
+    <list default="true" id="5ea43213-3713-4a34-90fe-3e5438bedbd2" name="Changes" comment="+ Enhancing code readability">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/general/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/general/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/io/write/table/ConsoleTablePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/io/write/table/ConsoleTablePrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/io/write/tree/FileTablePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/io/write/tree/FileTreePrinter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/io/write/tree/TreePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/io/write/tree/TreePrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/search/breadth/BreadthSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/search/breadth/BreadthSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/search/depth/DepthSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/search/depth/DepthSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/search/depth/DepthSearchTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/search/depth/DepthSearchTable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +81,7 @@
       <workItem from="1663533027195" duration="16810000" />
       <workItem from="1663885484272" duration="88000" />
       <workItem from="1664216793731" duration="27046000" />
-      <workItem from="1664361965996" duration="11257000" />
+      <workItem from="1664361965996" duration="12065000" />
     </task>
     <task id="LOCAL-00001" summary="+ DepthSearch">
       <created>1663551562351</created>
@@ -106,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664419375387</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="+ Enhancing code readability">
+      <created>1664421488646</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664421488646</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,7 +132,9 @@
     <MESSAGE value="+ DepthSearch" />
     <MESSAGE value="+ BreadthSearch" />
     <MESSAGE value="+ Add Search Tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Add Search Tree" />
+    <MESSAGE value="+ Enhancing readability" />
+    <MESSAGE value="+ Enhancing code readability" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Enhancing code readability" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Buscas_Grafos$App.ic" NAME="App Coverage Results" MODIFIED="1664254165278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

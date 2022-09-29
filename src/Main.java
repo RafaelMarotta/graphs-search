@@ -4,6 +4,7 @@ import domain.io.write.table.FileTablePrinter;
 import domain.general.Node;
 import domain.general.SearchResult;
 import domain.io.write.tree.ConsoleTreePrinter;
+import domain.io.write.tree.FileTreePrinter;
 import domain.search.breadth.BreadthSearch;
 import domain.search.depth.DepthSearch;
 
@@ -21,5 +22,8 @@ public class Main {
 
         ConsoleTreePrinter.print(breadthResult.getTreeNode());
         ConsoleTreePrinter.print(depthResult.getTreeNode());
+
+        FileTreePrinter.print(breadthResult.getTreeNode(), "breadth-search-tree.txt");
+        FileTreePrinter.print(depthResult.getTreeNode(), "depth-search-tree.txt");
     }
 }

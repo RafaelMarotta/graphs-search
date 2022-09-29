@@ -4,6 +4,7 @@ import domain.general.Node;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.util.LinkedList;
 
 public abstract class TreePrinter {
     protected final BufferedWriter writer;
@@ -23,24 +24,18 @@ public abstract class TreePrinter {
         writer.append(prefix)
                 .append(node.getValue())
                 .append("\n");
+
+        LinkedList<Node> neighborQueue = node.getNeighborQueue();
+
         if (hasChild(node)) {
-            while (untilLastChild(node)) {
-                var child = getChild(node);
+            for (int i = 0; i < neighborQueue.size() - 1; i++) {
+                var child = neighborQueue.get(i);
                 printTreeRecursively(child, childPrefix + HAS_CHILD_CHAR, childPrefix + "│   ");
             }
-            printTreeRecursively(getChild(node), childPrefix + LEAF_CHAR, childPrefix + "   ");
+            printTreeRecursively(neighborQueue.getLast(), childPrefix + LEAF_CHAR, childPrefix + "   ");
         }
     }
-
-    private static boolean untilLastChild(Node node) {
-        return node.getNeighborQueue().size() > 1;
-    }
-
     private static boolean hasChild(Node node) {
         return !node.getNeighborQueue().isEmpty();
-    }
-
-    private static Node getChild(Node node) {
-        return node.getNeighborQueue().poll();
     }
 }
