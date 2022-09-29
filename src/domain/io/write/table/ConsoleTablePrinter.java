@@ -23,6 +23,7 @@ public class ConsoleTablePrinter extends TablePrinter {
         writer.write("\n");
     }
 
+    // Get the division columns balancing the spaces
     @Override
     protected String getDiv(int length, int maxLength) {
         StringBuilder sb = new StringBuilder();

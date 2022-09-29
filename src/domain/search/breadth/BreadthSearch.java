@@ -7,13 +7,13 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class BreadthSearch {
-    private final Queue<Node> researchedNodes;
-    private final Queue<Node> successors = new LinkedList<>();
+    private final Queue<Node> researchedNodes; //A queue with the node search order
+    private final Queue<Node> successors = new LinkedList<>(); //Queue to control next node to be explored
 
-    private final Map<String, Node> treeNodeMap = new HashMap<>();
-    private final BreadthSearchTable searchTable;
+    private final Map<String, Node> treeNodeMap = new HashMap<>(); //Map to help get a node from his name
+    private final BreadthSearchTable searchTable; //Used to build the SearchTable
 
-    private final Node nodeTree;
+    private final Node nodeTree; //The root node of search tree
 
     public BreadthSearch(Node searchTree) {
         this.nodeTree = searchTree;
@@ -22,7 +22,7 @@ public class BreadthSearch {
     }
 
     public static SearchResult search(Node node) {
-        Node searchTree = new Node(node.getValue());
+        Node searchTree = new Node(node.getValue()); //Initialize the searchTree root node
         BreadthSearch search = new BreadthSearch(searchTree);
         search.searchRootNode(node);
         return search.getResult();
@@ -40,21 +40,38 @@ public class BreadthSearch {
         searchNode(node);
     }
     private boolean searchNode(Node node) {
-        node.getBorderedQueue().forEach(child -> addNode(node, successors, child));
-        if (successors.isEmpty()) {
+        mapChildren(node);
+        if (allNodesHasBeenExplored()) {
             return true;
         }
         return searchNode(successors.poll());
     }
 
+    private boolean allNodesHasBeenExplored() {
+        return successors.isEmpty();
+    }
+
+    //Handle the search of all children from a node
+    private void mapChildren(Node node) {
+        node.getNeighborQueue().forEach(child -> addNode(node, successors, child));
+    }
+
     private void addNode(Node parent, Queue<Node> successors, Node child) {
-        if (!researchedNodes.contains(child)) {
+        if (isNotDiscovered(child)) {
             researchedNodes.add(child);
-            Node treeChild = new Node(child.getValue());
-            treeNodeMap.put(child.getValue(), treeChild);
-            treeNodeMap.get(parent.getValue()).addSuccessor(treeChild);
-            successors.add(child);
+            addInSearchTree(parent, child);
             searchTable.addNode(child, parent);
+            successors.add(child);
         }
+    }
+
+    private boolean isNotDiscovered(Node child) {
+        return !researchedNodes.contains(child);
+    }
+
+    private void addInSearchTree(Node parent, Node child) {
+        Node treeChild = new Node(child.getValue());
+        treeNodeMap.put(child.getValue(), treeChild);
+        treeNodeMap.get(parent.getValue()).addSuccessor(treeChild);
     }
 }

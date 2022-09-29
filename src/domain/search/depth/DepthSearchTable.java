@@ -14,12 +14,12 @@ public class DepthSearchTable implements Table {
     private int counter;
     private final Map<Node, DepthSearchTableItem> nodes = new HashMap<>();
 
-    public void addDT(Node node, Node parent) {
+    public void newNode(Node node, Node parent) {
         counter++;
         nodes.put(node, new DepthSearchTableItem(parent, counter));
     }
 
-    public void addET(Node node) {
+    public void setToExplored(Node node) {
         counter++;
         nodes.get(node).setEndTime(counter);
     }

@@ -12,20 +12,26 @@ public class Node {
         this.nodes = new LinkedList<>();
     }
 
+    // Undirected edges
     public void addNeighbor(Node node) {
-        if (!nodes.contains(node)) {
+        if (edgeNotExists(node)) {
             nodes.add(node);
             node.addNeighbor(this);
         }
     }
 
+    // Directed edges
     public void addSuccessor(Node node) {
-        if (!nodes.contains(node)) {
+        if (edgeNotExists(node)) {
             nodes.add(node);
         }
     }
 
-    public Queue<Node> getBorderedQueue() {
+    private boolean edgeNotExists(Node node) {
+        return !nodes.contains(node);
+    }
+
+    public Queue<Node> getNeighborQueue() {
         return nodes;
     }
 

@@ -33,14 +33,14 @@ public abstract class TreePrinter {
     }
 
     private static boolean untilLastChild(Node node) {
-        return node.getBorderedQueue().size() > 1;
+        return node.getNeighborQueue().size() > 1;
     }
 
     private static boolean hasChild(Node node) {
-        return !node.getBorderedQueue().isEmpty();
+        return !node.getNeighborQueue().isEmpty();
     }
 
     private static Node getChild(Node node) {
-        return node.getBorderedQueue().poll();
+        return node.getNeighborQueue().poll();
     }
 }
