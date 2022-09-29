@@ -1,6 +1,7 @@
 package domain.general;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Node {
     private final String value;
@@ -11,11 +12,20 @@ public class Node {
         this.nodes = new LinkedList<>();
     }
 
-    public void addSuccessor(Node node) {
-        nodes.add(node);
+    public void addNeighbor(Node node) {
+        if (!nodes.contains(node)) {
+            nodes.add(node);
+            node.addNeighbor(this);
+        }
     }
 
-    public Queue<Node> getSuccessorsQueue() {
+    public void addSuccessor(Node node) {
+        if (!nodes.contains(node)) {
+            nodes.add(node);
+        }
+    }
+
+    public Queue<Node> getBorderedQueue() {
         return nodes;
     }
 

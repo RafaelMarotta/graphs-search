@@ -4,14 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ea43213-3713-4a34-90fe-3e5438bedbd2" name="Changes" comment="+ DepthSearch">
-      <change afterPath="$PROJECT_DIR$/src/domain/breadth/BreadthSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/breadth/BreadthSearchResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/breadth/BreadthSearchTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/breadth/BreadthSearchTableItem.java" afterDir="false" />
+    <list default="true" id="5ea43213-3713-4a34-90fe-3e5438bedbd2" name="Changes" comment="+ BreadthSearch">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/general/SearchResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/general/Table.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/general/TableItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/io/read/GraphReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/io/write/table/ConsoleTablePrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/io/write/table/FileTablePrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/io/write/table/TablePrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/io/write/tree/ConsoleTreePrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/io/write/tree/FileTablePrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/io/write/tree/TreePrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teste.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/depth/DepthSearchTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/depth/DepthSearchTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/breadth/BreadthSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/search/breadth/BreadthSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/breadth/BreadthSearchResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/breadth/BreadthSearchTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/search/breadth/BreadthSearchTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/breadth/BreadthSearchTableItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/search/breadth/BreadthSearchTableItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/depth/DepthSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/search/depth/DepthSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/depth/DepthSearchResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/depth/DepthSearchTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/search/depth/DepthSearchTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/depth/DepthSearchTableItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/search/depth/DepthSearchTableItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/general/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/general/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +37,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -36,22 +53,30 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rafae\IdeaProjects\Buscas_Grafos" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="domain.io.write" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -71,7 +96,10 @@
       <updated>1663530312409</updated>
       <workItem from="1663530315464" duration="2585000" />
       <workItem from="1663532937308" duration="53000" />
-      <workItem from="1663533027195" duration="15967000" />
+      <workItem from="1663533027195" duration="16810000" />
+      <workItem from="1663885484272" duration="88000" />
+      <workItem from="1664216793731" duration="27046000" />
+      <workItem from="1664361965996" duration="9041000" />
     </task>
     <task id="LOCAL-00001" summary="+ DepthSearch">
       <created>1663551562351</created>
@@ -80,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663551562351</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="+ BreadthSearch">
+      <created>1663557217521</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663557217521</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,9 +134,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="+ DepthSearch" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ DepthSearch" />
+    <MESSAGE value="+ BreadthSearch" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ BreadthSearch" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Buscas_Grafos$App.ic" NAME="App Coverage Results" MODIFIED="1663556891768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Buscas_Grafos$App.ic" NAME="App Coverage Results" MODIFIED="1664254165278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

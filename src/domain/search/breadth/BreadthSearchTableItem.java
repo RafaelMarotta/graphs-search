@@ -1,15 +1,17 @@
-package domain.breadth;
+package domain.search.breadth;
 
 import domain.general.Node;
+import domain.general.TableItem;
 
-public class BreadthSearchTableItem {
-    private int l;
+import java.util.List;
+
+public class BreadthSearchTableItem implements TableItem {
+    private final int l;
     private int level;
-    private Node parent;
+    private final Node parent;
 
     public BreadthSearchTableItem(int l, Node parent) {
         this.l = l;
-        this.level = level;
         this.parent = parent;
     }
 
@@ -27,5 +29,10 @@ public class BreadthSearchTableItem {
 
     public void setLevel(int level) {
         this.level = level;
+    }
+
+    @Override
+    public List<Object> getValues() {
+        return List.of(getL(), getLevel(), getParent() == null ? "{}" : getParent().getValue());
     }
 }

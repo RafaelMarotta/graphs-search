@@ -1,8 +1,11 @@
-package domain.depth;
+package domain.search.depth;
 
+import domain.general.TableItem;
 import domain.general.Node;
 
-public class DepthSearchTableItem {
+import java.util.List;
+
+public class DepthSearchTableItem implements TableItem {
     private final int discoveryTime;
     private int endTime;
     private final Node parent;
@@ -26,5 +29,10 @@ public class DepthSearchTableItem {
 
     public Node getParent() {
         return parent;
+    }
+
+    @Override
+    public List<Object> getValues() {
+        return List.of(getDiscoveryTime(), getEndTime(), getParent() == null ? "{}" : getParent().getValue());
     }
 }
