@@ -1,6 +1,6 @@
 package domain.io.read;
 
-import domain.general.Node;
+import domain.model.Node;
 
 import java.io.File;
 import java.io.FileNotFoundException;

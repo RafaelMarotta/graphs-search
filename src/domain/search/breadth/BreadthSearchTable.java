@@ -1,13 +1,10 @@
 package domain.search.breadth;
 
-import domain.general.Node;
-import domain.general.Table;
-import domain.general.TableItem;
+import domain.model.Node;
+import domain.model.Table;
+import domain.model.TableItem;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class BreadthSearchTable implements Table {
@@ -33,7 +30,7 @@ public class BreadthSearchTable implements Table {
 
     @Override
     public List<String> getDescriptions() {
-        return List.of("L", "LEVEL", "PAI");
+        return Arrays.asList("L", "LEVEL", "PAI");
     }
 
     @Override

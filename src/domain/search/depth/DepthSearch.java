@@ -1,13 +1,14 @@
 package domain.search.depth;
 
-import domain.general.Node;
-import domain.general.SearchResult;
+import domain.model.Node;
+import domain.model.SearchResult;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
 
 public class DepthSearch {
-    private final Queue<Node> researchedNodes; //A queue with the node search order
+    private final LinkedList<Node> researchedNodes; //A queue with the node search order
     private final DepthSearchTable searchTable; //Used to build the SearchTable
     private final Map<Node, Node> parentNodes = new HashMap<>(); //Map to help get the parent of a node from his name
     private final Map<String, Node> treeNodeMap = new HashMap<>(); //Map to help get a node from his name
@@ -22,13 +23,12 @@ public class DepthSearch {
     public static SearchResult search(Node node) {
         Node searchTree = new Node(node.getValue());
         DepthSearch dphSearch = new DepthSearch(searchTree);
-        dphSearch.searchRootNode(node);
+        dphSearch.searchRootNode(node.clone());
         return dphSearch.getResult();
     }
 
     public SearchResult getResult() {
-        List<String> researchNodeOrder = researchedNodes.stream().map(Node::getValue).collect(Collectors.toList());
-        return new SearchResult(searchTable, researchNodeOrder, nodeTree);
+        return new SearchResult(searchTable, researchedNodes, nodeTree);
     }
 
     private void searchRootNode(Node node) {

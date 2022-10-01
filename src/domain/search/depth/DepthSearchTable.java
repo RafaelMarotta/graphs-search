@@ -1,13 +1,10 @@
 package domain.search.depth;
 
-import domain.general.Table;
-import domain.general.TableItem;
-import domain.general.Node;
+import domain.model.Table;
+import domain.model.TableItem;
+import domain.model.Node;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class DepthSearchTable implements Table {
@@ -31,7 +28,7 @@ public class DepthSearchTable implements Table {
 
     @Override
     public List<String> getDescriptions() {
-        return List.of("TD", "TT", "PAI");
+        return Arrays.asList("TD", "TT", "PAI");
     }
 
     @Override

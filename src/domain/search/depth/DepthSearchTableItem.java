@@ -1,8 +1,9 @@
 package domain.search.depth;
 
-import domain.general.TableItem;
-import domain.general.Node;
+import domain.model.TableItem;
+import domain.model.Node;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class DepthSearchTableItem implements TableItem {
@@ -33,6 +34,6 @@ public class DepthSearchTableItem implements TableItem {
 
     @Override
     public List<Object> getValues() {
-        return List.of(getDiscoveryTime(), getEndTime(), getParent() == null ? "{}" : getParent().getValue());
+        return Arrays.asList(getDiscoveryTime(), getEndTime(), getParent() == null ? "{}" : getParent().getValue());
     }
 }

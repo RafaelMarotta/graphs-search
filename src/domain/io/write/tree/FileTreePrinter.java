@@ -1,6 +1,6 @@
 package domain.io.write.tree;
 
-import domain.general.Node;
+import domain.model.Node;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -13,11 +13,5 @@ public class FileTreePrinter extends TreePrinter {
 
     public static void print(Node node, String file) throws IOException {
         new FileTreePrinter(file).printTree(node);
-    }
-
-    @Override
-    public void printTree(Node node) throws IOException {
-        super.printTree(node);
-        writer.close();
     }
 }

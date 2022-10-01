@@ -1,6 +1,6 @@
 package domain.io.write.tree;
 
-import domain.general.Node;
+import domain.model.Node;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -29,12 +29,13 @@ public abstract class TreePrinter {
 
         if (hasChild(node)) {
             for (int i = 0; i < neighborQueue.size() - 1; i++) {
-                var child = neighborQueue.get(i);
+                Node child = neighborQueue.get(i);
                 printTreeRecursively(child, childPrefix + HAS_CHILD_CHAR, childPrefix + "│   ");
             }
             printTreeRecursively(neighborQueue.getLast(), childPrefix + LEAF_CHAR, childPrefix + "   ");
         }
     }
+
     private static boolean hasChild(Node node) {
         return !node.getNeighborQueue().isEmpty();
     }

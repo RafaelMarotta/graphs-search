@@ -1,7 +1,7 @@
 package domain.io.write.table;
 
-import domain.general.Table;
-import domain.general.TableItem;
+import domain.model.Table;
+import domain.model.TableItem;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -52,19 +52,19 @@ public abstract class TablePrinter {
     }
 
     protected int getDescriptionMaxLength() {
-        return table.getDescriptions().stream().mapToInt(String::length).max().orElseThrow();
+        return table.getDescriptions().stream().mapToInt(String::length).max().orElseThrow(RuntimeException::new);
     }
 
     protected int getLabelMaxLength() {
-        return table.getLabels().stream().mapToInt(String::length).max().orElseThrow();
+        return table.getLabels().stream().mapToInt(String::length).max().orElseThrow(RuntimeException::new);
     }
 
     protected int getRowMaxLength(int row) {
-        return getRow(row).stream().mapToInt(String::length).max().orElseThrow();
+        return getRow(row).stream().mapToInt(String::length).max().orElseThrow(RuntimeException::new);
     }
 
     protected int getColMaxLength(int col) {
-        return getCol(col).stream().mapToInt(String::length).max().orElseThrow();
+        return getCol(col).stream().mapToInt(String::length).max().orElseThrow(RuntimeException::new);
     }
 
     protected List<String> getRow(int row) {

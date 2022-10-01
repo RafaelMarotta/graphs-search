@@ -1,20 +1,18 @@
 package domain.io.write.table;
 
-import domain.general.Table;
+import domain.model.Table;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.util.List;
 
 public class ConsoleTablePrinter extends TablePrinter {
-    private static final BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
-    private ConsoleTablePrinter(Table table) {
+    private ConsoleTablePrinter(BufferedWriter writer, Table table) {
         super(writer, table);
     }
 
-    public static void print(Table table) throws IOException {
-        new ConsoleTablePrinter(table).printTable();
+    public static void print(BufferedWriter writer, Table table) throws IOException {
+        new ConsoleTablePrinter(writer, table).printTable();
     }
 
     @Override
@@ -28,7 +26,7 @@ public class ConsoleTablePrinter extends TablePrinter {
     protected String getDiv(int length, int maxLength) {
         StringBuilder sb = new StringBuilder();
         int blank = (maxLength - length);
-        for(int i = 0; i <= blank; i++) {
+        for (int i = 0; i <= blank; i++) {
             sb.append(" ");
         }
         sb.append("| ");

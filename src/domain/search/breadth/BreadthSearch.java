@@ -1,13 +1,15 @@
 package domain.search.breadth;
 
-import domain.general.Node;
-import domain.general.SearchResult;
+import domain.model.Node;
+import domain.model.SearchResult;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Queue;
 
 public class BreadthSearch {
-    private final Queue<Node> researchedNodes; //A queue with the node search order
+    private final LinkedList<Node> researchedNodes; //A queue with the node search order
     private final Queue<Node> successors = new LinkedList<>(); //Queue to control next node to be explored
 
     private final Map<String, Node> treeNodeMap = new HashMap<>(); //Map to help get a node from his name
@@ -24,13 +26,12 @@ public class BreadthSearch {
     public static SearchResult search(Node node) {
         Node searchTree = new Node(node.getValue()); //Initialize the searchTree root node
         BreadthSearch search = new BreadthSearch(searchTree);
-        search.searchRootNode(node);
+        search.searchRootNode(node.clone());
         return search.getResult();
     }
 
     public SearchResult getResult() {
-        List<String> researchNodeOrder = researchedNodes.stream().map(Node::getValue).collect(Collectors.toList());
-        return new SearchResult(searchTable, researchNodeOrder, nodeTree);
+        return new SearchResult(searchTable, researchedNodes, nodeTree);
     }
 
     public void searchRootNode(Node node) {
@@ -39,6 +40,7 @@ public class BreadthSearch {
         searchTable.addNode(node, null);
         searchNode(node);
     }
+
     private boolean searchNode(Node node) {
         mapChildren(node);
         if (allNodesHasBeenExplored()) {

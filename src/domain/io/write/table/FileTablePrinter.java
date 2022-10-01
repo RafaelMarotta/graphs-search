@@ -1,6 +1,6 @@
 package domain.io.write.table;
 
-import domain.general.Table;
+import domain.model.Table;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -14,12 +14,6 @@ public class FileTablePrinter extends TablePrinter {
 
     public static void print(Table table, String file) throws IOException {
         new FileTablePrinter(file, table).printTable();
-    }
-
-    @Override
-    protected synchronized void printTable() throws IOException {
-        super.printTable();
-        writer.close();
     }
 
     @Override

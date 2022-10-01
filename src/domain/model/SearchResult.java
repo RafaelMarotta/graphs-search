@@ -1,14 +1,14 @@
-package domain.general;
+package domain.model;
 
 import java.util.List;
 
 public class SearchResult {
     private final Table table;
-    private final List<String> researchNodeOrder;
+    private final List<Node> researchNodeOrder;
 
     private final Node treeNode;
 
-    public SearchResult(Table table, List<String> researchNodeOrder, Node treeNode) {
+    public SearchResult(Table table, List<Node> researchNodeOrder, Node treeNode) {
         this.table = table;
         this.researchNodeOrder = researchNodeOrder;
         this.treeNode = treeNode;
@@ -18,7 +18,7 @@ public class SearchResult {
         return table;
     }
 
-    public List<String> getResearchNodeOrder() {
+    public List<Node> getResearchNodeOrder() {
         return researchNodeOrder;
     }
 

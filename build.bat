@@ -1,0 +1,1 @@
+javac ./src/domain/model/*.java ./src/domain/io/read/*.java ./src/*.java ./src/domain/io/write/table/*.java ./src/domain/io/write/nodes/*.java ./src/domain/io/write/tree/*.java ./src/domain/search/breadth/*.java ./src/domain/search/depth/*.java ./src/domain/fleury/*.java -d ./bin

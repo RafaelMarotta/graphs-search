@@ -1,8 +1,9 @@
 package domain.search.breadth;
 
-import domain.general.Node;
-import domain.general.TableItem;
+import domain.model.Node;
+import domain.model.TableItem;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class BreadthSearchTableItem implements TableItem {
@@ -33,6 +34,6 @@ public class BreadthSearchTableItem implements TableItem {
 
     @Override
     public List<Object> getValues() {
-        return List.of(getL(), getLevel(), getParent() == null ? "{}" : getParent().getValue());
+        return Arrays.asList(getL(), getLevel(), getParent() == null ? "{}" : getParent().getValue());
     }
 }
